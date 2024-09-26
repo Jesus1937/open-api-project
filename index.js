@@ -30,4 +30,27 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=38.028&longitude=-121.884
        console.error('Fetch error:', error);
    });
 
+   fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=precipitation_sum,sunrise,sunset&timezone=GMT`)
+   .then(response => {
+       if (!response.ok) {
+           throw new Error('Network response was not ok');
+       }
+       return response.json();
+   })
+   .then(data => {
+       console.log('Daily Weather Data:', data);
+
+       // Extracting the first day's data
+       const precipitation = data.daily.precipitation_sum[0];
+       const sunrise = data.daily.sunrise[0];
+       const sunset = data.daily.sunset[0];
+
+       document.getElementById('precipitation').innerText = `Precipitation: ${precipitation} mm`;
+       document.getElementById('sunrise').innerText = `Sunrise: ${new Date(sunrise).toLocaleTimeString()}`;
+       document.getElementById('sunset').innerText = `Sunset: ${new Date(sunset).toLocaleTimeString()}`;
+   })
+   .catch(error => {
+       console.error('Fetch error:', error);
+   });
+
    
