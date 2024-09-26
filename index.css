@@ -35,5 +35,9 @@ body {
     margin: 10px 0;
   }
   
-  
-  
+  /*moving div more to the right to see it better*/
+  div {
+      text-align-last: center;
+      padding: 100px;
+  }
+    

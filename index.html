@@ -8,20 +8,35 @@
 
 </head>
 <body>
-
-    <div id="weather-info">
-        <p id="temperature"></p>
-        <p id="humidity"></p>
-        <p id="wind-speed"></p>
-        <p id="wind-direction"></p>
-        <p id="wind-gusts"></p>
-        <p id="precipitation"></p>
-        <p id="sunrise"></p>
-        <p id="sunset"></p>
-    </div>
-    
-
-    
+    <!-- Navigation Buttons -->
+    <nav>
+        <button id="hourly-btn">Hourly Weather</button>
+        <button id="daily-btn">Daily Weather</button>
+    </nav>
+ 
+    <!-- Section to display weather data below buttons -->
+    <section id="weather-data">
+        <!-- Hourly weather data -->
+        <div id="hourly-weather" style="display:none;">
+            <h2>Hourly Weather</h2>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+            <p id="wind-direction"></p>
+            <p id="wind-gusts"></p>
+        </div>
+ 
+        <!-- Daily weather data -->
+        <div id="daily-weather" style="display:none;">
+            <h2>Daily Weather</h2>
+            <p id="precipitation"></p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+        </div>
+    </section>
+ 
     <script src="index.js"></script>
-</body>
+ </body>
+ 
+
 </html>
