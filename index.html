@@ -3,40 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="index.css">
-
+    <script defer src="index.js"></script> 
 </head>
 <body>
-    <!-- Navigation Buttons -->
-    <nav>
+    <div class="navbar">
         <button id="hourly-btn">Hourly Weather</button>
         <button id="daily-btn">Daily Weather</button>
-    </nav>
- 
-    <!-- Section to display weather data below buttons -->
-    <section id="weather-data">
-        <!-- Hourly weather data -->
-        <div id="hourly-weather" style="display:none;">
-            <h2>Hourly Weather</h2>
-            <p id="temperature"></p>
-            <p id="humidity"></p>
-            <p id="wind-speed"></p>
-            <p id="wind-direction"></p>
-            <p id="wind-gusts"></p>
-        </div>
- 
-        <!-- Daily weather data -->
-        <div id="daily-weather" style="display:none;">
-            <h2>Daily Weather</h2>
-            <p id="precipitation"></p>
-            <p id="sunrise"></p>
-            <p id="sunset"></p>
-        </div>
-    </section>
- 
-    <script src="index.js"></script>
- </body>
- 
-
+    </div>
+    <div id="hourly-weather" style="display:none;">
+        <p id="temperature"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+        <p id="wind-direction"></p>
+        <p id="wind-gusts"></p>
+    </div>
+    <div id="daily-weather" style="display:none;">
+        <p id="precipitation"></p>
+        <p id="sunrise"></p>
+        <p id="sunset"></p>
+    </div>
+</body>
 </html>
